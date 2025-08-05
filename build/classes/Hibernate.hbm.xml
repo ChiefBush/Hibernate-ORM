@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    
+    <class name="userLogin.UserLogin" table="userlogin">
+        <id name="userId" column="userid">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="userName" column="username"> </property>
+        <property name="password" column="password"> </property>
+    </class>
+    
+    <class name="comp_type.type_model" table="reqtype">
+        <id name="type" column="type">
+            <generator class="assigned"></generator>
+        </id>
+    </class>
+    
+    <class name="complaint.complaint_model" table="complaint">
+        <id name="complaintId" column="complaintId">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="userId" column="userId"> </property>
+        <property name="subject" column="subject"> </property>
+        <property name="module" column="module"> </property>
+        <property name="description" column="description"></property>
+        <property name="type" column="type"> </property>
+        <property name="priority" column="priority"> </property>
+        <property name="status" column="status"> </property>
+        <property name="att_name" column="att_name"> </property>
+        <property name="attachments" column="attachments"> </property>
+        <property name="currently_assigned" column="currently_assigned"> </property>
+        <property name="dateTime" column="dateTime"> </property>
+        
+    </class>
+    
+    <class name="handle_user.hand_model" table="handlers">
+        <id name="id" column="id">
+            <generator class="native"></generator>
+        </id>
+        <property name="name" column="name"> </property>
+        <property name="module" column="module"> </property>
+        <property name="password" column="password"> </property>
+        <property name="head" column="head"> </property>
+        
+    </class>
+    <class name="modules.module_model" table="modules">
+        <id name="module" column="module">
+            <generator class="assigned"></generator>
+        </id>
+    </class>
+    
+    <class name="generator.gen_model" table="generate">
+        <id name="number" column="getnumber">
+            <generator class="assigned"></generator>
+        </id>
+    </class>
+    
+    <class name="history.hist_model" table="history">
+        <id name="count" column="count">
+            <generator class="native"></generator>
+        </id>
+        <property name="complaintId" column="complaintid"> </property>
+        <property name="status" column="status"> </property>
+        <property name="datetime" column="datetime"> </property>
+        <property name="comments" column="comments"> </property>
+    </class>
+    
+    <class name="message.msg_model" table="messages">
+        <id name="count" column="count">
+            <generator class="native"></generator>
+        </id>
+        <property name="complaintid" column="complaintid"> </property>
+        <property name="sender" column="sender"> </property>
+        <property name="datetime" column="datetime"> </property>
+        <property name="reciever" column="reciever"> </property>
+        <property name="attachments" column="attachments"> </property>
+        <property name="text" column="text"> </property>
+        <property name="sname" column="sname"> </property>
+        <property name="att_name" column="att_name"> </property>
+    </class>
+</hibernate-mapping>

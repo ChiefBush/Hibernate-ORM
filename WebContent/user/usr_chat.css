@@ -1,0 +1,36 @@
+.ui.form textarea:not([rows]){
+	height: 18em;
+}
+.ui.text.container {
+    font-size: 1.14285714rem;
+    margin-top: 100px;
+}
+
+.ui.segment:last-child{
+	margin-top: 100px;
+}
+p:first-child {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.ui.huge.header {
+    min-height: 1em;
+    font-size: 2em;
+}
+
+i.icon.nav {
+    font-size: 1.7em;
+    float: right;
+}
+
+.recieved{
+	max-width: 60%;
+}
+.send{
+	position: relative;
+	max-width: 60%;
+	left: 45%;
+}
+#load{
+	position: absolute;
+}
